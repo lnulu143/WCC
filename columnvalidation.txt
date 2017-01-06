@@ -1,0 +1,6 @@
+DirectorEmailAddress
+=AND(ISERROR(FIND(" ",DirectorEmailAddress,1)),IF(ISERROR(FIND("@",DirectorEmailAddress,2)),FALSE,AND(ISERROR(FIND("@",DirectorEmailAddress,FIND("@",DirectorEmailAddress,2)+1)),IF(ISERROR(FIND(".",DirectorEmailAddress,FIND("@",DirectorEmailAddress,2)+2)),FALSE,FIND(".",DirectorEmailAddress,FIND("@",DirectorEmailAddress,2)+2)<LEN(DirectorEmailAddress)))))
+
+
+primary
+=AND(ISERROR(FIND(" ",[Primary Email Address],1)),IF(ISERROR(FIND("@",[Primary Email Address],2)),FALSE,AND(ISERROR(FIND("@",[Primary Email Address],FIND("@",[Primary Email Address],2)+1)),IF(ISERROR(FIND(".",[Primary Email Address],FIND("@",[Primary Email Address],2)+2)),FALSE,FIND(".",[Primary Email Address],FIND("@",[Primary Email Address],2)+2)<LEN([Primary Email Address])))))
