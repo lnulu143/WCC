@@ -1,3 +1,5 @@
+https://github.com/lnulu143/WCC
+
 DirectorEmailAddress
 =AND(ISERROR(FIND(" ",DirectorEmailAddress,1)),IF(ISERROR(FIND("@",DirectorEmailAddress,2)),FALSE,AND(ISERROR(FIND("@",DirectorEmailAddress,FIND("@",DirectorEmailAddress,2)+1)),IF(ISERROR(FIND(".",DirectorEmailAddress,FIND("@",DirectorEmailAddress,2)+2)),FALSE,FIND(".",DirectorEmailAddress,FIND("@",DirectorEmailAddress,2)+2)<LEN(DirectorEmailAddress)))))
 
